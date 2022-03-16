@@ -1,0 +1,21 @@
+touch requirements.txt
+pip install -r requirements.txt
+django-admin startproject django_project .
+python manage.py startapp posts
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'parker', -название базы данных
+        'USER': 'admins', - название пользователя
+        'HOST': 'localhost', - хост
+        'PORT': 5432, порт
+        'PASSWORD': '1' - пароль от постгрес
+        ''
+    }
+}
+python3 manage.py makemigrations - создание миграции
+ python3 manage.py migrate- проведение миграции
+
+ python3 manage.py createsuperuser -создание админитратора
+
+
